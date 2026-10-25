@@ -1,0 +1,48 @@
+
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Ubuntu
+    runs-on: [self-hosted, Linux, X64, portfolio]
+    timeout-minutes: 15
+
+    steps:
+      - name: Update repository
+        run: |
+          set -e
+          cd /home/bastien/apps/portfolio
+          git fetch origin main
+          git merge --ff-only origin/main
+
+      - name: Build and restart Docker
+        run: |
+          set -e
+          cd /home/bastien/apps/portfolio
+          docker compose up -d --build --remove-orphans
+
+      - name: Apply Django migrations
+        run: |
+          set -e
+          cd /home/bastien/apps/portfolio
+          docker compose exec -T portfolio python manage.py migrate --noinput
+
+      - name: Verify deployment
+        run: |
+          set -e
+          curl --fail --silent --show-error \
+            --retry 5 --retry-delay 3 --retry-connrefused \
+            http://127.0.0.1:8002/ > /dev/null
+          echo "Portfolio deployment successful"
