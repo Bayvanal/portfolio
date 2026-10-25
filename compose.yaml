@@ -12,13 +12,10 @@ services:
 
     environment:
       DJANGO_DEBUG: "False"
+      DJANGO_DB_PATH: "/app/data/db.sqlite3"
 
     volumes:
       - portfolio_db:/app/data
 
 volumes:
   portfolio_db:
-
-environment:
-  DJANGO_DEBUG: "False"
-  DJANGO_DB_PATH: "/app/data/db.sqlite3"
