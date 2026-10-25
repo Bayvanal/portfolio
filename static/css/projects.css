@@ -1,0 +1,620 @@
+
+/* =========================================
+   CARTES PROJETS
+========================================= */
+
+.projects-section {
+    background: #f8faf9;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.portfolio-project {
+    background: #ffffff;
+    border: 1px solid #dce7e4;
+    border-radius: 8px;
+    overflow: hidden;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.portfolio-project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 45, 45, .07);
+}
+
+.project-image-link {
+    display: block;
+}
+
+.project-image {
+    height: 235px;
+    overflow: hidden;
+    background: #e4efec;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.portfolio-project:hover .project-image img {
+    transform: scale(1.025);
+}
+
+.project-body {
+    padding: 25px;
+}
+
+.project-category {
+    font-size: 11px;
+    color: #438c83;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.project-body h3 {
+    margin: 10px 0;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #183a3c;
+}
+
+.project-body p {
+    min-height: 48px;
+    color: #718282;
+    font-size: 14px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 22px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #08756f;
+}
+
+.project-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* =========================================
+   PAGE DÉTAILLÉE
+========================================= */
+
+.project-detail-page {
+    background: #f8faf9;
+}
+
+.project-detail-main {
+    margin-left: 0;
+}
+
+.project-detail-header {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: #176e69;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.detail-logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #103b3d;
+}
+
+.detail-logo span {
+    color: #68b7aa;
+}
+
+.project-detail-content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 30px 100px;
+}
+
+.project-detail-content h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 85px);
+    color: #183a3c;
+    letter-spacing: -2px;
+}
+
+.project-lead {
+    max-width: 750px;
+    font-size: 20px;
+    color: #617875;
+    line-height: 1.7;
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 25px 0;
+}
+
+.detail-tags span {
+    padding: 7px 12px;
+    background: #e6f0ee;
+    color: #286f69;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.detail-cover {
+    margin: 50px 0;
+    background: #e6f0ee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.detail-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.detail-section {
+    padding: 45px 0;
+    border-bottom: 1px solid #dce7e4;
+}
+
+.detail-section h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #183a3c;
+}
+
+.detail-section p {
+    max-width: 750px;
+    color: #617875;
+}
+
+.feature-list {
+    padding-left: 20px;
+    color: #617875;
+    line-height: 2;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .project-detail-content {
+        padding: 35px 22px 70px;
+    }
+
+    .project-detail-header {
+        padding: 25px 22px;
+    }
+
+    .project-detail-content h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* Affichage temporaire sans capture */
+
+.project-image {
+    position: relative;
+}
+
+.project-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 235px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #e4efec;
+    color: #176e69;
+}
+
+.project-placeholder[hidden] {
+    display: none;
+}
+
+.project-placeholder svg {
+    width: 35px;
+    height: 35px;
+    stroke-width: 1.4;
+}
+
+.project-placeholder span {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #183a3c;
+}
+
+.project-placeholder small {
+    font-size: 11px;
+    color: #6b8984;
+}
+
+
+
+/* =========================================
+   ARCHITECTURE TECHNIQUE
+========================================= */
+
+.architecture-diagram {
+    margin-top: 30px;
+    padding: 35px 25px;
+    background: #103a3d;
+    border-radius: 8px;
+}
+
+.architecture-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.architecture-node {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 460px;
+    padding: 18px 22px;
+    background: #1c5052;
+    border: 1px solid #426e70;
+    border-radius: 6px;
+}
+
+.architecture-node > svg {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    color: #a8d9d0;
+    stroke-width: 1.6;
+}
+
+.architecture-node h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-family: "Segoe UI", sans-serif;
+    color: #ffffff;
+}
+
+.architecture-node p {
+    margin: 0;
+    font-size: 12px;
+    color: #bcd6d2;
+    line-height: 1.5;
+}
+
+.architecture-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #a8d9d0;
+}
+
+.architecture-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   CHOIX TECHNIQUES
+========================================= */
+
+.technical-choices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.technical-choice {
+    padding: 22px;
+    border: 1px solid #dce7e4;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.technical-choice h3 {
+    margin: 0 0 12px;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    color: #183a3c;
+}
+
+.technical-choice p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #617875;
+}
+
+/* =========================================
+   GALERIE DE CAPTURES
+========================================= */
+
+.project-gallery {
+    margin-top: 25px;
+}
+
+.project-gallery figure {
+    margin: 0;
+}
+
+.project-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dce7e4;
+    border-radius: 6px;
+}
+
+.project-gallery figcaption {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #718282;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .architecture-diagram {
+        padding: 22px 15px;
+    }
+
+    .architecture-node {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .technical-choices {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* =========================================
+   EN-TÊTE ARCHITECTURE
+========================================= */
+
+.architecture-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 10px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #438c83;
+}
+
+/* =========================================
+   NAVIGATION PAGE PROJET
+========================================= */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.back-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* =========================================
+   BOUTONS ET LIENS
+========================================= */
+
+.detail-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.detail-actions .btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* =========================================
+   FOOTER PAGE PROJET
+========================================= */
+
+.project-detail-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    border-top: 1px solid #dce7e4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 12px;
+    color: #718282;
+}
+
+.project-detail-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #176e69;
+    font-weight: 600;
+}
+
+.project-detail-footer svg {
+    width: 15px;
+    height: 15px;
+}
+
+@media (max-width: 600px) {
+
+    .project-detail-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+
+/* =========================================
+   VIDÉO DE DÉMONSTRATION
+========================================= */
+
+.project-video {
+    margin-top: 30px;
+}
+
+.project-video-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    color: #438c83;
+}
+
+.project-video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #103a3d;
+}
+
+.project-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.project-video-caption {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #718282;
+}
+
+
+
+/* Performances Machine Learning */
+
+.model-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.model-metric {
+    padding: 26px 18px;
+    background: #f3f7f5;
+    border: 1px solid #dce7e4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.model-metric strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #145052;
+    margin-bottom: 8px;
+}
+
+.model-metric span {
+    font-size: 12px;
+    color: #607574;
+}
+
+.model-metrics-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #718282;
+}
+
+@media (max-width: 600px) {
+    .model-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.project-gallery-link {
+    display: block;
+    cursor: zoom-in;
+}
+
+.project-gallery-link img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

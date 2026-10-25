@@ -1,0 +1,590 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="Portfolio de Bastien Allo, étudiant ingénieur à CY Tech en Business Intelligence & Analytics. Projets Data Engineering, BI et Machine Learning.">
+
+    <title>Bastien Allo | Portfolio Data & BI</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/portfolio_fusion.css' %}">
+</head>
+
+<body>
+
+    <!-- =====================================
+         MENU LATÉRAL
+    ====================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="#accueil" class="logo" aria-label="Retour à l'accueil">
+            B<span>A</span>
+        </a>
+
+        <nav class="sidebar-nav" aria-label="Navigation principale">
+
+            <a href="#accueil" class="nav-link active" aria-current="location">
+                <i data-lucide="house"></i>
+                <span>Accueil</span>
+            </a>
+
+            <a href="#apropos" class="nav-link">
+                <i data-lucide="user-round"></i>
+                <span>À propos</span>
+            </a>
+
+            <a href="#parcours" class="nav-link">
+                <i data-lucide="graduation-cap"></i>
+                <span>Parcours</span>
+            </a>
+
+            <a href="#competences" class="nav-link">
+                <i data-lucide="layers"></i>
+                <span>Compétences</span>
+            </a>
+
+            <a href="#projets" class="nav-link">
+                <i data-lucide="folder"></i>
+                <span>Projets</span>
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <i data-lucide="mail"></i>
+                <span>Contact</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="social-links">
+
+                <a href="https://www.linkedin.com/in/bastien-allo-243597213/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Profil LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+
+                <a href="https://github.com/Bayvanal"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Profil GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+
+                <a href="mailto:bastien.allo@gmail.com"
+                   aria-label="Envoyer un email">
+                    <i data-lucide="mail"></i>
+                </a>
+
+            </div>
+
+            <p class="sidebar-copyright">
+                © 2026 Bastien Allo
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         CONTENU PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+        <!-- =================================
+             ACCUEIL
+        ================================== -->
+
+        <section id="accueil" class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <div class="eyebrow">
+                        ÉLÈVE INGÉNIEUR · BUSINESS INTELLIGENCE & ANALYTICS
+                    </div>
+
+                    <h1>Bastien <span>Allo</span></h1>
+
+                    <h2>Étudiant ingénieur · Data & BI</h2>
+
+                    <p>
+                        Étudiant ingénieur à CY Tech en Business Intelligence
+                        &amp; Analytics, je conçois des projets mêlant traitement
+                        des données, Machine Learning et développement d'applications.
+                    </p>
+
+                    <p>
+                        Je recherche un stage de six mois minimum
+                        à partir de mai 2027.
+                    </p>
+
+                    <div class="actions">
+
+                        <a class="btn primary" href="#contact">
+                            Me contacter
+                        </a>
+
+                        <a class="btn secondary" href="#projets">
+                            Découvrir mes projets
+                        </a>
+
+                        <a class="btn secondary"
+                           href="{% static 'documents/CV_Bastien_Allo.pdf' %}"
+                           download>
+                            Télécharger mon CV
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PORTRAIT -->
+
+                <div class="hero-visual">
+
+                    <div class="portrait-frame">
+
+                        <img
+                            src="{% static 'images/portrait.png' %}"
+                            alt="Portrait de Bastien Allo"
+                            class="portrait"
+                        >
+
+                    </div>
+
+                    <div class="data-label">
+                        <span class="data-label-dot"></span>
+                        DATA ENGINEERING
+                        <small>PYTHON / SQL / ETL / CLOUD</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             À PROPOS
+        ================================== -->
+
+        <section id="apropos" class="section about-section">
+
+            <div class="eyebrow">
+                01 / PRÉSENTATION
+            </div>
+
+            <h2>À propos de moi</h2>
+
+            <p>
+                Étudiant ingénieur à CY Tech, spécialisé en Business Intelligence
+                &amp; Analytics, j'ai d'abord étudié les mathématiques appliquées
+                avant de choisir une spécialisation tournée vers l'informatique
+                et l'exploitation des données.
+            </p>
+
+            <p>
+                Mes projets me permettent de travailler sur toute la chaîne de valeur
+                des données : intégration et qualité avec Talend, classification
+                avec Python et scikit-learn, visualisation avec Streamlit,
+                et déploiement d'applications avec Docker.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             PARCOURS — TIMELINE
+        ================================== -->
+
+        <section id="parcours" class="section parcours-section">
+        
+            <div class="eyebrow">02 / PARCOURS</div>
+        
+            <div class="section-heading">
+                <h2>Mon parcours</h2>
+                <span>Formation & expériences professionnelles</span>
+            </div>
+        
+            <p class="section-intro">
+                Un parcours associant mathématiques appliquées,
+                informatique et expériences professionnelles,
+                aujourd'hui orienté vers l'ingénierie des données.
+            </p>
+        
+            <div class="timeline">
+            
+                <!-- CY TECH -->
+            
+                <article class="timeline-item">
+                
+                    <div class="timeline-marker">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                
+                    <div class="timeline-content">
+                    
+                        <div class="timeline-header">
+                            <h3>CY Tech</h3>
+                            <span class="timeline-date">
+                                En cours
+                            </span>
+                        </div>
+                    
+                        <h4>
+                            Cycle ingénieur — Business Intelligence & Analytics
+                        </h4>
+                    
+                        <p>
+                            Formation en Data Engineering, ETL,
+                            modélisation décisionnelle, statistiques,
+                            visualisation et gouvernance des données.
+                        </p>
+                    
+                        <div class="timeline-tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Talend</span>
+                            <span>Scala / Spark</span>
+                        </div>
+                    
+                    </div>
+                
+                </article>
+            
+            
+                <!-- ALLIANCE HEALTHCARE 2025 -->
+            
+                <article class="timeline-item">
+                
+                    <div class="timeline-marker">
+                        <i data-lucide="briefcase-business"></i>
+                    </div>
+                
+                    <div class="timeline-content">
+                    
+                        <div class="timeline-header">
+                            <h3>Alliance Healthcare Répartition</h3>
+                            <span class="timeline-date">
+                                Mai – août 2025
+                            </span>
+                        </div>
+                    
+                        <h4>Service codification</h4>
+                    
+                        <p>
+                            Codification et gestion des références,
+                            contribution à la fiabilité et à la qualité
+                            des informations.
+                        </p>
+                    
+                    </div>
+                
+                </article>
+            
+            
+                <!-- ALLIANCE HEALTHCARE SPAIN -->
+            
+                <article class="timeline-item">
+                
+                    <div class="timeline-marker">
+                        <i data-lucide="chart-no-axes-column-increasing"></i>
+                    </div>
+                
+                    <div class="timeline-content">
+                    
+                        <div class="timeline-header">
+                            <h3>Alliance Healthcare Spain</h3>
+                            <span class="timeline-date">
+                                Mai – août 2024
+                            </span>
+                        </div>
+                    
+                        <h4>Stagiaire Data / BI</h4>
+                    
+                        <p>
+                            Conception d'un tableau de bord Power BI
+                            permettant le suivi de la productivité
+                            des employés et la visualisation des
+                            indicateurs de performance opérationnelle.
+                        </p>
+                    
+                        <div class="timeline-tags">
+                            <span>Power BI</span>
+                            <span>DataViz</span>
+                            <span>Reporting</span>
+                        </div>
+                    
+                    </div>
+                
+                </article>
+            
+            
+                <!-- AG2R -->
+            
+                <article class="timeline-item">
+                
+                    <div class="timeline-marker">
+                        <i data-lucide="database"></i>
+                    </div>
+                
+                    <div class="timeline-content">
+                    
+                        <div class="timeline-header">
+                            <h3>AG2R La Mondiale</h3>
+                            <span class="timeline-date">
+                                Juin – août 2023
+                            </span>
+                        </div>
+                    
+                        <h4>Stagiaire — Service actuariat</h4>
+                    
+                        <p>
+                            Analyse et traitement de données avec SAS
+                            pour répondre aux besoins du service
+                            actuariat.
+                        </p>
+                    
+                        <div class="timeline-tags">
+                            <span>SAS</span>
+                            <span>Analyse de données</span>
+                        </div>
+                    
+                    </div>
+                
+                </article>
+            
+            </div>
+        
+        </section>
+
+
+        <!-- =================================
+             COMPÉTENCES
+        ================================== -->
+
+        <section id="competences" class="section">
+
+            <div class="eyebrow">
+                03 / EXPERTISE
+            </div>
+
+            <h2>Compétences techniques</h2>
+
+            <div class="cards">
+
+                <article class="card">
+                    <span class="card-number">01</span>
+                    <h3>Data Engineering</h3>
+                    <p>Python · SQL · Talend · ETL/ELT · Scala / Spark</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">02</span>
+                    <h3>Business Intelligence</h3>
+                    <p>Power BI · SAS · Pandas · Excel · Modélisation décisionnelle</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">03</span>
+                    <h3>Machine Learning</h3>
+                    <p>scikit-learn · TensorFlow · Statistiques · Classification</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">04</span>
+                    <h3>Développement</h3>
+                    <p>Django · Streamlit · HTML/CSS · JavaScript · Git</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">05</span>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <p>Azure · GCP · Docker · GitHub Actions</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             PROJETS
+        ================================== -->
+            
+        <section id="projets" class="section projects-section">
+        
+            <div class="eyebrow">04 / RÉALISATIONS</div>
+        
+            <div class="section-heading">
+                <h2>Projets sélectionnés</h2>
+                <span>Développement · Data · Cloud</span>
+            </div>
+        
+            <p class="section-intro">
+                Une sélection de projets réalisés pendant
+                ma formation et à titre personnel.
+            </p>
+        
+            <div class="projects-grid">
+            
+                {% for project in projects %}
+            
+                <article class="portfolio-project">
+                
+                    <a
+                        href="{% url 'projects:detail' project.slug %}"
+                        class="project-image-link"
+                        aria-label="Découvrir le projet {{ project.title }}"
+                    >
+
+                        <div class="project-image">
+                        
+                            <img
+                                src="{% static project.image %}"
+                                alt="Capture du projet {{ project.title }}"
+                                loading="lazy"
+                                onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+                            >
+                        
+                            <div class="project-placeholder" hidden>
+                                <i data-lucide="workflow"></i>
+                                <span>{{ project.title }}</span>
+                                <small>{{ project.category }}</small>
+                            </div>
+                        
+                        </div>
+                    </a>
+                
+                    <div class="project-body">
+                    
+                        <span class="project-category">
+                            {{ project.category }}
+                        </span>
+                    
+                        <h3>{{ project.title }}</h3>
+                    
+                        <p>{{ project.summary }}</p>
+                    
+                        <div class="tags">
+                            {% for technology in project.technologies %}
+                                <span>{{ technology }}</span>
+                            {% endfor %}
+                        </div>
+                    
+                        <a
+                            href="{% url 'projects:detail' project.slug %}"
+                            class="project-link"
+                        >
+                            Voir le projet
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+                    
+                    </div>
+                
+                </article>
+            
+                {% endfor %}
+            
+            </div>
+        
+        </section>
+
+        <!-- =================================
+             CONTACT
+        ================================== -->
+
+        <section id="contact" class="section contact">
+
+            <div class="eyebrow">
+                05 / CONTACT
+            </div>
+
+            <h2>Travaillons ensemble.</h2>
+
+            <p>
+                Je recherche un stage de six mois minimum
+                à partir de mai 2027 dans les domaines
+                du Data Engineering, de la Business Intelligence
+                ou du développement de solutions Data.
+            </p>
+
+            <div class="actions">
+
+                <a class="btn primary"
+                   href="mailto:bastien.allo@gmail.com">
+                    Me contacter
+                </a>
+
+                <a class="btn secondary"
+                   href="https://www.linkedin.com/in/bastien-allo-243597213/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Mon LinkedIn
+                </a>
+
+                <a class="btn secondary"
+                   href="https://github.com/Bayvanal"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Mon GitHub
+                </a>
+
+                <a class="btn secondary"
+                   href="{% static 'documents/CV_Bastien_Allo.pdf' %}"
+                   download>
+                    Télécharger mon CV
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PIED DE PAGE
+        ================================== -->
+
+        <footer>
+            © 2026 Bastien Allo · Portfolio Data Engineering
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <!-- Icônes Lucide -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+    <!-- Navigation active -->
+    <script src="{% static 'js/navigation.js' %}"></script>
+
+</body>
+</html>
